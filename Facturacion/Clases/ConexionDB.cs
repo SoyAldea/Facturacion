@@ -17,7 +17,7 @@ namespace Sistema_Facturacion {
             this.Servidor = "DESKTOP-O1UG8FD"; // nombre del servidor
             this.Usuario = "sa";
             this.Clave = "123456";
-            this.seguridad = false; // cambia a true si usarás Windows Authentication
+            this.seguridad = true; // cambia a true si usarás Windows Authentication
         }
 
         // Método que crea la conexión

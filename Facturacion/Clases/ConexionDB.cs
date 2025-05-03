@@ -1,8 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Channels;
+using System.Web.UI;
 
-namespace Sistema_Facturacion {
-    public class ConexionDB {
+namespace Sistema_Facturacion
+{
+    public class ConexionDB
+    {
         // Atributos
         private string Base;
         private string Servidor;
@@ -11,45 +16,54 @@ namespace Sistema_Facturacion {
         private bool seguridad;
         private static ConexionDB Con = null;
 
-        // Constructor privado
-        private ConexionDB() {
-            this.Base = "Facturacion"; // nombre de la base de datos
-            this.Servidor = "DESKTOP-O1UG8FD"; // nombre del servidor
+        // Métodos de conexión
+        private ConexionDB()
+        {
+            this.Base = "Facturacion";
+            this.Servidor = "DESKTOP-O1UG8FD";
             this.Usuario = "sa";
             this.Clave = "123456";
-            this.seguridad = true; // cambia a true si usarás Windows Authentication
+            this.seguridad = true;
         }
 
-        // Método que crea la conexión
-        public SqlConnection CrearConexion() {
-            SqlConnection cadena = new SqlConnection();
+        // Método de conexión efectivo
+        public SqlConnection CrearConexion()
+        {
+            SqlConnection Cadena = new SqlConnection();
+            try
+            {
+                // Construcción base de la cadena de conexión
+                Cadena.ConnectionString = "Server=" + this.Servidor + ";Database=" + this.Base + ";";
 
-            try {
-                cadena.ConnectionString = $"Server={this.Servidor};Database={this.Base};";
-
-                if (this.seguridad) {
-                    cadena.ConnectionString += "Integrated Security=SSPI;";
-                } else {
-                    cadena.ConnectionString += $"User ID={this.Usuario};Password={this.Clave};";
+                // Validar tipo de autenticación
+                if (this.seguridad)
+                {
+                    Cadena.ConnectionString += "Integrated Security=SSPI;";
                 }
-            } catch (Exception ex) {
+                else
+                {
+                    Cadena.ConnectionString += "User ID=" + this.Usuario + ";Password=" + this.Clave + ";";
+                }
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine("Error en la conexión: " + ex.Message);
             }
-
-            return cadena;
+            return Cadena;
         }
 
-        // Singleton para la clase
-        public static ConexionDB Getinstancia() {
-            if (Con == null) {
+        // Método para obtener la instancia de la conexión
+        public static ConexionDB Getinstancia()
+        {
+            if (Con == null)
+            {
                 Con = new ConexionDB();
             }
             return Con;
         }
 
-        // Método estático que devuelve directamente una conexión
         public static SqlConnection getInstancia() {
             return Getinstancia().CrearConexion();
         }
-    }
+    } // <- Se agregó este cierre de llave para corregir el error CS1513
 }

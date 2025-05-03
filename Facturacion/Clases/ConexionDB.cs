@@ -20,14 +20,6 @@ namespace Sistema_Facturacion {
             this.seguridad = false; // cambia a true si usarás Windows Authentication
         }
 
-        //private ConexionDB() {
-        //    this.Base = "BD_Facturacion"; // nombre de la base de datos
-        //    this.Servidor = "NOMBREUSUARIO\\SQLEXPRESS"; // nombre del servidor
-        //    this.Usuario = "nobreUsuario";
-        //    this.Clave = "";
-        //    this.seguridad = true; // cambia a true si usarás Windows Authentication
-        //}
-
         // Método que crea la conexión
         public SqlConnection CrearConexion() {
             SqlConnection cadena = new SqlConnection();

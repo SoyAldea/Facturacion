@@ -3,68 +3,104 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Sistema Facturacion</title>
-
-    <!-- Enlaces a estilos y favicon -->
+    <title>Sistema Facturación</title>
     <link href="../Content/MiStilo.css" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/x-icon" href="../Imagenes/Favicon.png" />
+    <link rel="shortcut icon" href="../Imagenes/Favicon.png" type="image/x-icon" />
 
-    <!-- Estilos CSS adicionales -->
     <style type="text/css">
-        .PnlMensaje {
-            margin-top: 80px;
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
         }
-        .TextUsuario {}
-        .TextClave {
-            margin-left: 211px;
+
+        .login-container {
+            width: 520px;
+            margin: 80px auto;
+            background-image: url('../Imagenes/FondoLogin.png');
+            background-size: cover;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
         }
-        .BtnAceptar {}
+
+        .login-header {
+            background-color: #3399ff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .login-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+            .login-form label {
+                font-weight: bold;
+                color: white;
+                align-self: flex-start;
+            }
+
+            .login-form input[type="text"],
+            .login-form input[type="password"] {
+                width: 100%;
+                padding: 8px;
+                font-size: 16px;
+                color: #0066FF;
+            }
+
+            .login-form .login-button {
+                margin-top: 10px;
+                width: 100px;
+                height: 40px;
+                font-weight: bold;
+            }
+
+        .cerradura {
+            display: block;
+            margin: 0 auto 15px;
+            height: 85px;
+        }
+
+        .mensaje-panel {
+            margin-top: 15px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <!-- Logo y presentación -->
-            <div id="Logo">
-                <h2>SISTEMA</h2>
-                <h3>DE FACTURACIONES ELECTRÓNICA</h3>
+        <div class="login-container">
+            <div class="login-header">CONTROL DE ACCESO</div>
+
+            <asp:Image ID="ImgCerradura" runat="server" ImageUrl="~/Imagenes/CerraduraRoja.png" CssClass="cerradura" />
+
+            <div class="login-form">
+                <asp:Label ID="Usuario" runat="server" Text="Usuario:" ForeColor="White" />
+                <asp:TextBox ID="TextUsuario" runat="server" ToolTip="Introduzca su Usuario" />
+
+                <asp:Label ID="LblClave" runat="server" Text="Clave:" ForeColor="White"/>
+                <asp:TextBox ID="TextClave" runat="server" TextMode="Password" ToolTip="Introduzca su Contraseña" />
+
+                <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" CssClass="login-button" OnClick="BtnAceptar_Click" />
             </div>
 
-            <!-- Panel general -->
-            <asp:Panel ID="PnlAcceso" runat="server" BorderColor="Black" BorderStyle="Solid" CssClass="PnlAcceso" Width="520px" Height="268px" BackImageUrl="../Imagenes/FondoLogin.png">
-                
-                <!-- Panel de control de acceso -->
-                <asp:Panel ID="PnlControl" runat="server" Height="37px" Width="520px" BackColor="#3399ff" style="margin-left: 0px">
-                    <asp:Label ID="LblControl" runat="server" Text="control de acceso" Font-Bold="true" ForeColor="White" Font-Size="Larger" CssClass="LblControl"></asp:Label>
-                </asp:Panel>
-
-                <!-- Datos de usuario -->
-                <asp:Image ID="ImgCerradura" runat="server" ImageUrl="~/Imagenes/CerraduraRoja.png" Height="85px" Width="95px" CssClass="ImgCerradura" />
-                <asp:Label ID="LblClave" runat="server" Text="Clave:" Font-Bold="True" Font-Size="Large" ForeColor="White" style="position:absolute; top:130px; right:315px"></asp:Label>
-                <asp:Label ID="Usuario" runat="server" Text="Usuario:" Font-Bold="True" Font-Size="Large" ForeColor="White" style="position:absolute; top:100px; right:315px"></asp:Label>
-               <asp:TextBox ID="TextUsuario" runat="server" Font-Bold="True" ToolTip="Introduzca su Usuario" Font-Size="Large" ForeColor="#0066FF" Width="202px"></asp:TextBox>
-
-              <asp:TextBox ID="TextClave" runat="server" Font-Size="Large" Font-Bold="True"
-                 ToolTip="Introduzca su Contraseña" ForeColor="#0066FF"
-                 AutoCompleteType="Disabled" CssClass="TextClave" TextMode="Password"
-                 Width="202px" Height="22px"></asp:TextBox>
-
-             <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" ToolTip="Presione para aceptar la validación"
-               Font-Bold="true" BorderStyle="Outset" Height="40px" Width="100px"
-               CssClass="BtnAceptar" OnClick="BtnAceptar_Click" />
-
-                <!-- Panel de mensajería -->
-                <asp:Panel ID="PnlMensaje" runat="server" Height="34px" Width="520px" CssClass="PnlMensaje" BackColor="Black">
-                    <asp:Label ID="LblMensaje" runat="server" Text="Mensaje." Font-Bold="True" ForeColor="white" CssClass="LblMensaje"></asp:Label>
-                </asp:Panel>
+            <asp:Panel ID="PnlMensaje" runat="server" CssClass="mensaje-panel">
+                <asp:Label ID="LblMensaje" runat="server" Text="Mensaje." />
             </asp:Panel>
-
-            <!-- Timer y ScriptManager -->
-            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-            <asp:Timer ID="Timer1" runat="server" Interval="5000" Enabled="false"></asp:Timer>
         </div>
-        
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:Timer ID="Timer1" runat="server" Interval="5000" Enabled="false" />
     </form>
 </body>
 </html>

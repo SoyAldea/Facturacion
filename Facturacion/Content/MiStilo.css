@@ -1,0 +1,592 @@
+﻿body {
+    background-image: url("../Imagenes/CajasAlmacen.png") , url("../Imagenes/Fondo1.jpg");
+    background-size: 50%, cover;
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#Logo > h2   {
+    position: absolute;
+    top: 1px;
+    left: 600px;
+    font-size: 38px;
+}
+
+#Logo > h3 {
+    position: absolute;
+    top: 70px;
+    left: 455px;
+    font-size: 25px;
+}
+
+.CajasAlmacen {
+    position: absolute;
+    top: 253px;
+    left: 249px;
+}
+
+.PnlAcceso {
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    
+}
+
+.LblControl {
+    position: absolute;
+    top: -1px;
+    left: 185px;
+    margin-right:auto;
+    
+}
+
+.pnlMensaje {
+    position: absolute;
+    top: 232px;
+    left: 0px;
+    
+}
+
+.lblMensaje {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    
+}
+
+.imgCerradura {
+    position: absolute;
+    top: 92px;
+    left: 13px;
+}
+
+.Lblusuario {
+    position: absolute;
+    top: 73px; /* Ajusta este valor para moverlo hacia arriba o abajo */
+    
+}
+
+.LblClave {
+    position: absolute;
+    top: 50px;
+    left: 170px;
+}
+
+
+.LblClave {
+    position: absolute;
+    top: 133px;
+    left: 150px;
+}
+
+.BtnAceptar {
+    position:absolute;
+    top:160px;
+
+}
+/*=================================Menu principal maqueta============================*/
+#cabecera {
+    height: 150px;
+    background-color: #FF7800;
+    color: white;
+    border: 2px dashed #A6AE06;
+    box-shadow: 10px 10px 10px #000;
+    position: relative;
+    z-index: 2;
+}
+
+#contenidoCabecera {
+    width: 960px;
+    margin: auto;
+}
+
+#barraHorizontal {
+    height: 40px;
+    background-color: #A64E06;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px #000 inset;
+    text-align: center;
+    width: 1260px;
+    margin-left: -150px;
+}
+
+    #barraHorizontal > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #barraHorizontal li {
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #FF9A46;
+        color: #A64E06;
+        box-shadow: 0px 0px 5px #000 inset;
+    }
+
+ #barraHorizontal li > a {
+    display: block;
+    color: #A64E06;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+#logotipo {
+    width: 35%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.img-responsive {
+    width: 200px;
+    height: 90px;
+    position: absolute;
+    margin-left: -307px;
+}
+
+.BtnAceptar {
+    position: absolute;
+    top: 177px;
+    left: 418px;
+}
+
+.TxtUsuario {
+    position: absolute;
+    top: 73px;
+    left: 250px;
+}
+
+.TxtClave {
+    position: absolute;
+    top: 133px;
+    left: 250px;
+}
+
+#columnIzq, #ColumnDer {
+    float: left;
+    width: 20%;
+    min-height: 692px;
+}
+
+#menuContextual {
+    list-style-type: none;
+    padding: 0;
+    margin: 3px 0;
+}
+
+#contenidoPrincipal {
+    width: 60%;
+    float: left;
+    min-height: 692px;
+    margin: 0;
+}
+
+#contenedorGeneral {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #A64E06;
+    box-shadow: 0px 0px 10px #000;
+}
+
+#menuContextual > li {
+    padding: 10px;
+    text-align: center;
+    background-color: #A5AE06;
+    border: 1px outset #A5AE06;
+    box-shadow: 0px 0px 10px #000 inset;
+}
+
+    #menuContextual > li > a {
+    text-decoration: none;
+    color: white;
+    }
+
+#columnCentro {
+    float: left;
+    width: 67.5%;
+    min-height: 650px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #000 inset;
+}
+
+#copy{
+    position:absolute;
+    margin-top:3px;
+
+}
+
+.lblIdentificacion {
+    position: absolute;
+    margin-left: 1060px;
+    margin-top: 3px;
+}
+
+/*===============================fin maquetacion menu principal========================*/
+
+ImgAceptar {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 14px;
+}
+
+ImbNuevo {
+    position: absolute;
+    margin-top: 87px;
+    margin-left: 14px;
+}
+
+ImbCancelar {
+    position: absolute;
+    margin-top: 157px;
+    margin-left: 14px;
+}
+
+/*=======================Mantenimiento botonera symbol mensaje========================*/
+
+.PnlBotonera {
+    position: absolute;
+    margin-left: 860px;
+    margin-top: -62px;
+}
+
+.imgBarraAzul {
+    position: relative;
+    margin-top: 276px;
+    margin-left: 1px;
+}
+
+.lblMensaje2 {
+    position: absolute;
+    margin-top: -37px;
+    margin-left: 74px;
+}
+
+/*=======================Fin Mantenimiento botonera y mensaje========================*/
+
+/*=======================Frm Empresa=================================================*/
+
+
+.pnldatos {
+    position: absolute;
+    margin-top: -298px;
+    margin-left: 38px;
+}
+
+.IMGLOGO {
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 77px;
+}
+
+.img-1 {
+    border-color: black;
+    border-style: solid;
+    width: 180px;
+    height: 100px;
+    margin-left: 57px;
+}
+
+#file {
+    cursor: pointer;
+}
+
+.ImbBuscar {
+    position: absolute;
+    margin-top: 227px;
+    margin-left: 14px;
+}
+
+.ImbModificar {
+    position: absolute;
+    margin-top: 297px;
+    margin-left: 14px;
+}
+
+.Imbprinter {
+    position: absolute;
+    margin-top: 367px;
+    margin-left: 14px;
+}
+
+.file-wrapper input{
+
+    cursor:pointer;
+    font-size:100px;
+    height: 100%;
+    opacity: 0.01;
+    position:absolute;
+    right: 0;
+    top: 0;
+
+}
+
+button {
+    border: 0;
+    background-image: linear-gradient(150deg, #9500FF, #05F, #0000FF);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    button span {
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+    }
+
+.LblNombre {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 313px;
+}
+
+.LblDireccion {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 313px;
+}
+
+.Telefono {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 313px;
+}
+
+.RNC {
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 313px;
+}
+
+.TxtNombre {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 393px;
+}
+
+.TxtDireccion {
+    position: absolute;
+    margin-top: 108px;
+    margin-left: 393px;
+}
+
+.TxtTelefono {
+    position: absolute;
+    top: 325px;
+    left: 393px;
+}
+
+.TxtRNC {
+    position: absolute;
+    top: 385px;
+    left: 393px;
+}
+/*========================================Fin Frmempresa========================================*/
+
+
+/*========================================Frm Cajas y Bodegas====================================*/
+
+.LblCodigo {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 225px;
+}
+
+.LblReferencia {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 225px;
+}
+
+.LblDescripcion {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 225px;
+}
+
+.TxtCodigo {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 320px;
+    text-align: right;
+}
+
+.file-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    margin-left: 5px;
+}
+
+.Pnlpanel2 {
+    z-index: 4;
+    position: absolute;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    left: 302px;
+    top: 520px;
+}
+
+/*===============================================Frm Clientes======================================*/
+
+.lblCodigoCliente {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.lblTipoCliente {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 208px;
+}
+
+.lblNombreCliente {
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 524px;
+}
+
+.lblpaginaCliente {
+    position: absolute;
+    margin-top: 133px;
+    margin-left: 15px;
+}
+
+.lblcelularCliente {
+    position: absolute;
+    margin-top: 173px;
+    margin-left: 15px;
+}
+
+.lblcorreoCliente {
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 15px;
+}
+
+.TxtCodigoCliente {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 80px;
+    text-align: right;
+}
+
+.TxtTipocliente {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 308px;
+}
+
+.TxtNombrecliente {
+    position: absolute;
+    top: 12px;
+    left: 596px;
+}
+
+.TxtRNCCliente {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 93px;
+}
+
+.TxtContactoCliente {
+    position: absolute;
+    margin-top: 51px;
+    margin-left: 93px;
+    top: 0px;
+    left: 0px;
+}
+
+.TxtCargoCliente {
+    position: absolute;
+    margin-top: 91px;
+    margin-left: 93px;
+}
+
+.TxtPaginaCliente {
+    position: absolute;
+    margin-top: 131px;
+    margin-left: 93px;
+}
+
+.TxtCelularCliente {
+    position: absolute;
+    margin-top: 169px;
+    margin-left: 93px;
+}
+
+.TxtCorreoCliente {
+    position: absolute;
+    margin-top: 209px;
+    margin-left: 93px;
+}
+
+.TxtReferencia {
+    position: absolute;
+    margin-top: 108px;
+    margin-left: 326px;
+}
+
+.TxtDescripcion {
+    position: absolute;
+    top: 158px;
+    left: 326px;
+}
+
+.PnlPanel {
+    z-index: 5;
+    position: absolute;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    left: 304px;
+    top: 520px;
+}
+
+.PnlDatosGeneral {
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 390px;
+}
+
+.TxtCedulaCliente {
+    position: absolute;
+    margin-top: 51px;
+    margin-left: 93px;
+    top: 0px;
+    left: 0px;
+}
+
+.PnlPanel2Clientes {
+    z-index: 4;
+    position: absolute;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    left: 302px;
+    top: 532px;
+}
+
+.PnlPanelCliente {
+    z-index: 5;
+    position: absolute;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    left: 304px;
+    top: 532px;
+}
+
+/*==============================================Fin Frm Cliente====================================*/

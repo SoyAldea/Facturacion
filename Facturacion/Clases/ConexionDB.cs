@@ -62,9 +62,8 @@ namespace Sistema_Facturacion
             return Con;
         }
 
-        internal static object getInstancia()
-        {
-            throw new NotImplementedException();
+        public static SqlConnection getInstancia() {
+            return Getinstancia().CrearConexion();
         }
     } // <- Se agregó este cierre de llave para corregir el error CS1513
-    }
+}

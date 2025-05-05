@@ -7,12 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Facturacion.Login
-{
+namespace Facturacion.Login {
 
 
-    public partial class FrmLogin
-    {
+    public partial class FrmLogin {
 
         /// <summary>
         /// Control form1.
@@ -24,33 +22,6 @@ namespace Facturacion.Login
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control PnlAcceso.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PnlAcceso;
-
-        /// <summary>
-        /// Control PnlControl.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PnlControl;
-
-        /// <summary>
-        /// Control LblControl.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblControl;
-
-        /// <summary>
         /// Control ImgCerradura.
         /// </summary>
         /// <remarks>
@@ -58,15 +29,6 @@ namespace Facturacion.Login
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImgCerradura;
-
-        /// <summary>
-        /// Control LblClave.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblClave;
 
         /// <summary>
         /// Control Usuario.
@@ -85,6 +47,15 @@ namespace Facturacion.Login
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextUsuario;
+
+        /// <summary>
+        /// Control LblClave.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblClave;
 
         /// <summary>
         /// Control TextClave.
